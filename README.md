@@ -1,8 +1,8 @@
-# { WORKSHOP NAME } 
+# Getting Started with Tabular Foundation Models with TabPFN
 ### Presentation: [{ YOUR PRESENTATION NAME }](workshop/presentation_template.pdf)
 
 ## Workshop description
-Describe why your topic is important and what you want to share with your audience
+During this workshop, you'll get an intro into the new era of tabular foundation models (TFMs), how they differ from traditional ML models, as well as the new capabilities they unlock for AI agents. We will start with a light intro into TFMs, how they operate and what their capabilities are. Following this, we will do some hands on exercises with TabPFN for regression, classification and interpretability, as well as some more advanced tasks like time-series predictions.
 
 ## Requirements
 * PyLadies Amsterdam uses [uv](https://docs.astral.sh/uv/) for dependency management
@@ -35,10 +35,10 @@ To get started, open the `pyproject.toml` file and set the required Python versi
 After you have specified the Python version, you can create a virtual environment with `uv venv` and add packages with `uv add <package>`. Before the workshop, you can generate a requirements.txt file, which is needed e.g. for running code in Google Colab, by running `uv export > requirements.txt`.
 
 ## Video record
-Re-watch [this YouTube stream](link)
+Re-watch [this YouTube stream](https://www.youtube.com/live/PY7ecCQfOv0?si=kVXmevHEJ_aubCpq)
 
 ## Credits
-This workshop was set up by @pyladiesams and {your GitHub handler}
+This workshop was set up by @pyladiesams and @TuanaCelik
 
 ## Appendix
 ### Pre-Commit Hooks
