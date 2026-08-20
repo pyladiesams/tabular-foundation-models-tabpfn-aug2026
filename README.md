@@ -60,8 +60,16 @@ beyond what is already public:
   confirm your email, then copy the key from the **API Keys** page. Please do this
   *before* the session — the email confirmation is the one step that can cost you five
   minutes of the workshop.
-* Python ≥ 3.10 (required by `tabpfn-client`) if you run locally. No GPU needed either
-  way: inference happens on Prior Labs' servers.
+* Python ≥ 3.10 (required by `tabpfn-client`) if you run locally.
+
+Section 0 of the notebook offers **two ways to run TabPFN**, and you pick one:
+
+* **via the client** (what we use on the day) — inference happens on Prior Labs'
+  servers, so **no GPU needed** and nothing to download beyond the small client package.
+* **locally**, with the open-source [`tabpfn`](https://github.com/PriorLabs/TabPFN)
+  package — your data never leaves your machine, but you want a GPU for it to be quick,
+  and you have to accept the model licence on first use. Sections 1–4 work either way;
+  thinking mode in section 5 is API-only.
 
 ## Usage
 
@@ -143,11 +151,15 @@ outputs of the participant notebook before committing.
   many times against one fitted context. It passes `fit_mode="fit_with_cache"` so the
   server reuses the encoded context, which is what keeps it to a couple of minutes rather
   than much longer.
-- **One install cell, at the top.** Section 0 installs `tabpfn-client`,
-  `tabpfn-extensions[interpretability]`, `shap` and `tabpfn-time-series`. The last three
-  pull in the open-source `tabpfn` package and torch, so it takes a minute or two. Get the
-  room to run that cell first and talk over it: nobody then hits a missing module
-  mid-section, and any Colab restart prompt happens before you start.
+- **Installs happen once, in section 0** — one cell for the local route, one for the
+  client route, and people run whichever they picked. Both pull in
+  `tabpfn-extensions[interpretability]`, `shap` and `tabpfn-time-series` (needed by
+  sections 3 and 4 whichever backend you use), which brings torch along, so it takes a
+  minute or two. Get the room to run that cell first and talk over it: nobody then hits a
+  missing module mid-section, and any Colab restart prompt happens before you start.
+- **The client is the default.** In section 0's import cell the client line is active and
+  the local one is commented out, matching "this is our preference for today". If you
+  would rather demo local, swap which line is commented — **in both notebooks**.
 - **Thinking mode (section 5) is off by default.** Thinking fits draw on a separate
   monthly quota (20 by default), so treat it as a presenter demo, not a room-wide
   exercise.
